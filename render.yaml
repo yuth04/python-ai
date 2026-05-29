@@ -2,15 +2,8 @@ services:
   - type: web
     name: python-ai
     runtime: python
-    rootDir: python-ai
     buildCommand: pip install -r requirements.txt
-    startCommand: gunicorn -w 1 --timeout 120 -b 0.0.0.0:10000 app:app
-    healthCheckPath: /health
+    startCommand: gunicorn app:app --host 0.0.0.0 --port 5000
     envVars:
       - key: LARAVEL_API_URL
-        sync: false
-      - key: IMAGEKIT_PRIVATE_KEY
-        sync: false
-      - key: PYTHON_VERSION
-        value: 3.11.0
-    plan: standard
+        value: https://your-laravel-api.com
