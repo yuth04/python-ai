@@ -19,7 +19,7 @@ This service allows users to upload a product image and find visually similar pr
 - 🌐 Flask REST API
 - 🔗 Laravel/VENDO integration
 - 🐳 Docker support
-- ☁️ Deployment configuration for Render
+- ☁️ Deployment configuration for Hugging Face
 
 ---
 
